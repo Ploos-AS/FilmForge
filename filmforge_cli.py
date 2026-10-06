@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""FilmForge M1.1 CLI."""
+"""FilmForge M2 CLI."""
 from __future__ import annotations
 import argparse, json
 from pathlib import Path
@@ -24,15 +24,40 @@ def foundry(p):
         scores=c.get("scores",{}); vals=[float(scores[k]) for k in CRITERIA if k in scores]
         rows.append({"id":c.get("id"),"title":c.get("title"),"reviewed":len(vals)==len(CRITERIA),"score":round(sum(vals)/len(vals),1) if vals else None})
     return {"foundry":p.get("id"),"candidate_count":len(rows),"candidates":rows}
+def coverage(p):
+    if p.get("kind") != "FilmForgeShotCoverage":
+        return {"ok": False, "errors": ["kind must be FilmForgeShotCoverage"]}
+    shots = p.get("shots", [])
+    errors = []
+    seen = set()
+    total = 0.0
+    scenes = {}
+    for shot in shots:
+        sid = shot.get("id")
+        if not sid: errors.append("shot missing id")
+        elif sid in seen: errors.append(f"duplicate shot id: {sid}")
+        seen.add(sid)
+        try: dur = float(shot.get("seconds", 0))
+        except (TypeError, ValueError): dur = 0
+        if dur <= 0: errors.append(f"{sid or 'unknown'} duration must be > 0")
+        total += dur
+        scene = shot.get("scene")
+        scenes[scene] = scenes.get(scene, 0.0) + dur
+    return {"ok": not errors, "film_id": p.get("film_id"), "shot_count": len(shots),
+            "total_seconds": round(total, 3), "total_minutes": round(total / 60, 3),
+            "scene_seconds": scenes, "errors": errors}
+
 def main():
     ap=argparse.ArgumentParser(prog="filmforge"); sp=ap.add_subparsers(dest="cmd",required=True)
-    for cmd in ("validate","plan","foundry"):
+    for cmd in ("validate","plan","foundry","coverage"):
         q=sp.add_parser(cmd); q.add_argument("project")
     a=ap.parse_args(); p=load(a.project)
+    if a.cmd=="coverage":
+        result=coverage(p); print(json.dumps(result,indent=2)); raise SystemExit(0 if result["ok"] else 1)
     if a.cmd=="foundry":
         if p.get("kind")!="FilmForgeUniverseFoundry": raise SystemExit("ERROR: kind must be FilmForgeUniverseFoundry")
         print(json.dumps(foundry(p),indent=2)); return
     e=validate(p)
     if e: print("\n".join(f"ERROR: {x}" for x in e)); raise SystemExit(1)
-    print("OK: valid FilmForge M1.1 project" if a.cmd=="validate" else json.dumps(plan(p),indent=2))
+    print("OK: valid FilmForge project" if a.cmd=="validate" else json.dumps(plan(p),indent=2))
 if __name__=="__main__": main()
