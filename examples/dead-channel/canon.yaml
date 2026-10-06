@@ -1,0 +1,19 @@
+version: "0.1"
+kind: FilmForgeCanonDecision
+id: ff-reference-universe-001
+universe_id: dead-channel
+title: "Dead Channel"
+status: frozen-for-reference-film
+decision_gate: M1.5
+reference_film:
+  working_title: "Dead Channel"
+  target_minutes: 18
+  primary_character: sera-vale
+  primary_location: kestrel-listening-station
+preserved_candidates:
+  - echo-debt
+  - memory-reef
+notes:
+  - "Freeze only facts required by Film #1."
+  - "Unanswered cosmology remains intentionally non-canon."
+  - "Future stories may extend canon but must not retroactively weaken Film #1 rules."
