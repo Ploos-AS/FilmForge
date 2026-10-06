@@ -1,0 +1,13 @@
+version: "0.1"
+kind: FilmForgeScenePlan
+film_id: dead-channel-film-001
+target_duration_s: 1080
+scenes:
+  - {id: sc01, title: "Kestrel", start_s: 0, end_s: 90, purpose: "Isolation, routine, impossible speaker and title hook."}
+  - {id: sc02, title: "Forbidden Frequency", start_s: 90, end_s: 240, purpose: "Sera confirms a transmission from an extinct civilization."}
+  - {id: sc03, title: "Reply", start_s: 240, end_s: 390, purpose: "The voice reacts to Sera and reciprocal contact begins."}
+  - {id: sc04, title: "Cael", start_s: 390, end_s: 540, purpose: "Cael becomes a person; both sides test the impossible contact."}
+  - {id: sc05, title: "Wrong History", start_s: 540, end_s: 690, purpose: "Verification shows Cael's history and Sera's present cannot coexist."}
+  - {id: sc06, title: "The Warning", start_s: 690, end_s: 870, purpose: "Sera recognizes an event associated with Cael's civilization's final hours."}
+  - {id: sc07, title: "Transmit", start_s: 870, end_s: 990, purpose: "Sera violates protocol and warns Cael; contact collapses."}
+  - {id: sc08, title: "We Heard You", start_s: 990, end_s: 1080, purpose: "Silence, truthful report, then universe-scale chorus."}
