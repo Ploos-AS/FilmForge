@@ -1,0 +1,26 @@
+version: "0.1"
+kind: FilmForgeEntityRegistry
+entities:
+  - id: sera-vale
+    type: character
+    name: "Sera Vale"
+    role: protagonist
+  - id: cael
+    type: character
+    name: "Cael"
+    role: remote voice
+  - id: kestrel-listening-station
+    type: location
+    name: "Kestrel Listening Station"
+  - id: kestrel-listening-room
+    type: location
+    parent: kestrel-listening-station
+  - id: forbidden-receiver
+    type: prop
+    name: "Legacy receiver"
+  - id: kestrel-main-console
+    type: prop
+    name: "Main communications console"
+  - id: dead-channel
+    type: phenomenon
+    name: "Dead Channel"
