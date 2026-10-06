@@ -1,0 +1,65 @@
+version: "0.1"
+kind: FilmForgeUniverseFoundry
+id: foundry-001
+criteria:
+  - premise
+  - emotional_potential
+  - visual_identity
+  - originality
+  - production_feasibility
+  - franchise_depth
+
+candidates:
+  - id: echo-debt
+    title: "Echo Debt"
+    premise: "Deep-space crews discover that faster-than-light messages are not predictions or recordings, but replies from versions of themselves whose histories no longer exist."
+    emotional_engine: "People must decide how much they owe lives they technically never lived."
+    visual_identity: "Industrial frontier spacecraft contrasted with impossible delayed reflections, duplicated radio traffic and subtly divergent spaces."
+    first_film: "A two-person recovery crew boards a silent relay and receives a distress call in their own voices describing events that have not happened."
+    expansion: "Erased histories, competing civilizations exploiting echoes, and the question of what happens to discarded timelines."
+    production_fit: "Small cast, one ship, one relay station and effects driven by sound, screens and controlled anomalies."
+
+  - id: borrowed-sun
+    title: "Borrowed Sun"
+    premise: "Human settlements survive around artificial suns leased from an unknown machine civilization; one colony learns its star is scheduled for repossession."
+    emotional_engine: "A community discovers that the sky itself is rented property."
+    visual_identity: "Warm pastoral habitats beneath visibly engineered stars, immense maintenance geometry and sudden unnatural sunsets."
+    first_film: "A maintenance pilot finds a countdown hidden in the light spectrum and has hours to prove what it means."
+    expansion: "The builders, other leased systems, black-market stellar technology and civilizations abandoned after default."
+    production_fit: "Few characters; landscapes and one cockpit carry much of the visual storytelling."
+
+  - id: dead-channel
+    title: "Dead Channel"
+    premise: "Every inhabited world contains the same forbidden radio frequency, broadcasting mundane conversations from civilizations that disappeared centuries earlier."
+    emotional_engine: "The dead sound alive, intimate and unaware of their fate."
+    visual_identity: "Lonely receivers, analog instrumentation, immense quiet landscapes and ordinary voices against cosmic scale."
+    first_film: "A remote technician hears a live reply to a question she accidentally transmits on the forbidden channel."
+    expansion: "Origin of the channel, vanished worlds, listeners who answer back and the possibility that humanity is already part of the archive."
+    production_fit: "Extremely production-friendly: one protagonist, remote station, voice performances and atmospheric environments."
+
+  - id: the-last-orbit
+    title: "The Last Orbit"
+    premise: "Ancient orbital infrastructure quietly moves inhabited planets by microscopic amounts, and humanity discovers Earth has been avoiding something for millennia."
+    emotional_engine: "Safety depends on a machine nobody understands and a threat nobody can see."
+    visual_identity: "Megastructure fragments hidden among familiar orbital hardware, precise celestial geometry and impossible starfield changes."
+    first_film: "Salvagers recover a device whose navigation display shows Earth on a centuries-long evasive trajectory."
+    expansion: "Planetary shepherds, abandoned protected worlds and whatever the system is maneuvering around."
+    production_fit: "Contained salvage story with limited cast; larger spectacle can remain implied."
+
+  - id: second-sky
+    title: "Second Sky"
+    premise: "Explorers find worlds whose night skies show a completely different universe, visible only after local sunset."
+    emotional_engine: "Home, reality and belonging become uncertain when the heavens themselves disagree."
+    visual_identity: "Daylight realism transforming into spectacular alien constellations and enormous unfamiliar celestial structures."
+    first_film: "A survey team realizes their orbital ship is absent from the night sky and cannot be contacted after sunset."
+    expansion: "Boundary worlds, two cosmologies, migration between realities and entities mapping the overlap."
+    production_fit: "Strong generative visuals; first film can use two characters and one survey site."
+
+  - id: memory-reef
+    title: "Memory Reef"
+    premise: "Interstellar wreckage grows into crystalline reefs that replay fragments of the memories of everyone who died aboard."
+    emotional_engine: "Grief becomes a physical place that can be explored, exploited or falsified."
+    visual_identity: "Dark wrecks overtaken by luminous memory-crystal growth and fleeting human scenes embedded in surfaces."
+    first_film: "A salvager finds a memory of herself aboard a ship destroyed before she was born."
+    expansion: "Memory economies, fabricated identities, ancient reefs and the origin of the phenomenon."
+    production_fit: "One wreck, small cast, visually distinctive recurring asset and strong emotional focus."
