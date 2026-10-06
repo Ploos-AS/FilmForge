@@ -1,0 +1,19 @@
+version: "0.1"
+kind: FilmForgeVisualDevelopmentBrief
+id: dead-channel-props-vdev-001
+entities: [forbidden-receiver, kestrel-main-console]
+receiver:
+  design: "older heavy communications receiver retained among newer modules"
+  features: [physical-speaker-grille, tactile-tuning-controls, small-spectrum-display, power-indicator, removable-audio-lead]
+  exclusions: [magic-radio, antique-wood-radio, steampunk, supernatural-symbols]
+console:
+  design: "modern utilitarian communications workstation with physical controls and flat compositable displays"
+  features: [transmit-control, diagnostic-routing, archive-workspace, restrained-status-lighting]
+  exclusions: [holographic-ui, transparent-screens, random-generated-text, gamer-rgb]
+required_views:
+  - receiver-front
+  - receiver-three-quarter
+  - receiver-installed-in-wall
+  - console-operator-view
+  - console-three-quarter
+  - transmit-control-macro
