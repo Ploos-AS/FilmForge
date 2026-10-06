@@ -1,4 +1,4 @@
-version: "0.1"
+version: "0.2"
 kind: FilmForgeVisualCandidateManifest
 film_id: dead-channel-film-001
 policy:
@@ -6,51 +6,23 @@ policy:
   approval_requires_human: true
   generated_candidate_is_canon: false
   preserve_rejected_provenance: true
+approved_reference_boards:
+  - id: dead-channel-visual-board-v1
+    artifact_path: dead-channel-visual-board-v1.png
+    status: approved
+    scope: visual-direction
+    canonical_asset_master: false
+    informs: [sera-face-v1, sera-workwear-v1, kestrel-exterior-v1, kestrel-room-a-v1, receiver-hero-v1, console-hero-v1, dc-look-v1]
+    note: "Approved as the M2.2 visual-development direction. Individual production assets still require dedicated candidate selection and locking."
 sets:
-  - asset_id: sera-face-v1
-    brief: visual-dev/sera.yaml
-    target: neutral-headshot
-    candidates: []
-  - asset_id: sera-workwear-v1
-    brief: visual-dev/sera.yaml
-    target: full-body-front
-    candidates: []
-  - asset_id: sera-turnaround-v1
-    brief: visual-dev/sera.yaml
-    target: turnaround
-    depends_on: [sera-face-v1, sera-workwear-v1]
-    candidates: []
-  - asset_id: kestrel-exterior-v1
-    brief: visual-dev/kestrel.yaml
-    target: exterior-hero-wide
-    candidates: []
-  - asset_id: kestrel-room-a-v1
-    brief: visual-dev/kestrel.yaml
-    target: listening-room-angle-a
-    candidates: []
-  - asset_id: kestrel-floorplan-v1
-    brief: visual-dev/kestrel.yaml
-    target: floorplan
-    candidates: []
-  - asset_id: receiver-hero-v1
-    brief: visual-dev/props.yaml
-    target: receiver-three-quarter
-    candidates: []
-  - asset_id: console-hero-v1
-    brief: visual-dev/props.yaml
-    target: console-three-quarter
-    candidates: []
-  - asset_id: ui-kit-v1
-    target: deterministic-design
-    generation: prohibited
-    candidates: []
+  - {asset_id: sera-face-v1, brief: visual-dev/sera.yaml, target: neutral-headshot, candidates: []}
+  - {asset_id: sera-workwear-v1, brief: visual-dev/sera.yaml, target: full-body-front, candidates: []}
+  - {asset_id: sera-turnaround-v1, brief: visual-dev/sera.yaml, target: turnaround, depends_on: [sera-face-v1, sera-workwear-v1], candidates: []}
+  - {asset_id: kestrel-exterior-v1, brief: visual-dev/kestrel.yaml, target: exterior-hero-wide, candidates: []}
+  - {asset_id: kestrel-room-a-v1, brief: visual-dev/kestrel.yaml, target: listening-room-angle-a, candidates: []}
+  - {asset_id: kestrel-floorplan-v1, brief: visual-dev/kestrel.yaml, target: floorplan, candidates: []}
+  - {asset_id: receiver-hero-v1, brief: visual-dev/props.yaml, target: receiver-three-quarter, candidates: []}
+  - {asset_id: console-hero-v1, brief: visual-dev/props.yaml, target: console-three-quarter, candidates: []}
+  - {asset_id: ui-kit-v1, target: deterministic-design, generation: prohibited, candidates: []}
 approval_record:
-  fields:
-    - candidate_id
-    - asset_id
-    - artifact_path
-    - sha256
-    - reviewer
-    - decision
-    - rationale
-    - approved_at
+  fields: [candidate_id, asset_id, artifact_path, sha256, reviewer, decision, rationale, approved_at]
