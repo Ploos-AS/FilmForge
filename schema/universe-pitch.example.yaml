@@ -1,0 +1,20 @@
+version: "0.1"
+kind: FilmForgeUniversePitch
+id: pitch-001
+title: "Untitled"
+premise: ""
+audience_promise: ""
+visual_identity: ""
+emotional_engine: ""
+rules:
+  - ""
+franchise_questions:
+  - ""
+production_notes: ""
+scores:
+  premise: 0
+  emotional_potential: 0
+  visual_identity: 0
+  originality: 0
+  production_feasibility: 0
+  franchise_depth: 0
