@@ -6,6 +6,14 @@ policy:
   approval_requires_human: true
   generated_candidate_is_canon: false
   preserve_rejected_provenance: true
+candidate_boards:
+  - id: sera-development-board-v1
+    artifact_path: sera/sera-development-board-v1.png
+    status: candidate
+    scope: character-development
+    canonical_asset_master: false
+    informs: [sera-face-v1, sera-workwear-v1, sera-turnaround-v1]
+    note: "Development board establishes candidate direction only; embedded APPROVED labels are illustrative and do not constitute FilmForge asset approval."
 approved_reference_boards:
   - id: dead-channel-visual-board-v1
     artifact_path: dead-channel-visual-board-v1.png
