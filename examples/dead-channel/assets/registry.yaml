@@ -1,53 +1,23 @@
-version: "0.1"
+version: "0.2"
 kind: FilmForgeAssetRegistry
 film_id: dead-channel-film-001
+status_model:
+  states: [planned, candidate, approved, locked]
+  generation_ready_states: [approved, locked]
 assets:
-  - id: sera-face-v1
-    entity: sera-vale
-    type: character-face
-    status: required-reference
-    lock: identity
-  - id: sera-workwear-v1
-    entity: sera-vale
-    type: character-costume
-    status: required-reference
-    lock: design
-  - id: sera-turnaround-v1
-    entity: sera-vale
-    type: character-turnaround
-    status: planned
-    lock: proportions
-  - id: kestrel-room-a-v1
-    entity: kestrel-listening-room
-    type: environment-reference
-    status: required-reference
-    lock: geometry
-  - id: kestrel-floorplan-v1
-    entity: kestrel-listening-room
-    type: environment-layout
-    status: required-reference
-    lock: geometry
-  - id: kestrel-exterior-v1
-    entity: kestrel-listening-station
-    type: environment-reference
-    status: required-reference
-    lock: design
-  - id: receiver-hero-v1
-    entity: forbidden-receiver
-    type: prop-reference
-    status: required-reference
-    lock: design
-  - id: console-hero-v1
-    entity: kestrel-main-console
-    type: prop-reference
-    status: required-reference
-    lock: design
-  - id: ui-kit-v1
-    entity: kestrel-main-console
-    type: ui-kit
-    status: planned
-    lock: typography-layout
+  - {id: sera-face-v1, entity: sera-vale, type: character-face, required: true, status: planned, lock: identity}
+  - {id: sera-workwear-v1, entity: sera-vale, type: character-costume, required: true, status: planned, lock: design}
+  - {id: sera-turnaround-v1, entity: sera-vale, type: character-turnaround, required: true, status: planned, lock: proportions}
+  - {id: kestrel-room-a-v1, entity: kestrel-listening-room, type: environment-reference, required: true, status: planned, lock: geometry}
+  - {id: kestrel-floorplan-v1, entity: kestrel-listening-room, type: environment-layout, required: true, status: planned, lock: geometry}
+  - {id: kestrel-exterior-v1, entity: kestrel-listening-station, type: environment-reference, required: true, status: planned, lock: design}
+  - {id: receiver-hero-v1, entity: forbidden-receiver, type: prop-reference, required: true, status: planned, lock: design}
+  - {id: console-hero-v1, entity: kestrel-main-console, type: prop-reference, required: true, status: planned, lock: design}
+  - {id: ui-kit-v1, entity: kestrel-main-console, type: ui-kit, required: true, status: planned, lock: typography-layout}
   - id: dc-look-v1
     type: visual-style
-    status: required-reference
+    required: true
+    status: approved
     lock: cinematography
+    reference: ../visual-dev/dead-channel-visual-board-v1.png
+    approval: "M2.2 visual direction approved; board is a style/reference board, not a canonical per-asset master."
