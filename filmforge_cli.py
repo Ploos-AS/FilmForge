@@ -4,10 +4,15 @@ from __future__ import annotations
 import argparse, json
 from pathlib import Path
 import yaml
+
 REQUIRED=("version","kind","id","title","format","canon","scenes")
 CRITERIA=("premise","emotional_potential","visual_identity","originality","production_feasibility","franchise_depth")
+ASSET_STATES=("planned","candidate","approved","locked")
+READY_ASSET_STATES=("approved","locked")
+
 def load(path):
     with Path(path).open(encoding="utf-8") as x: return yaml.safe_load(x)
+
 def validate(p):
     e=[f"missing required field: {k}" for k in REQUIRED if k not in p]
     if p.get("kind")!="FilmForgeProject": e.append("kind must be FilmForgeProject")
@@ -15,57 +20,51 @@ def validate(p):
     if int(p.get("format",{}).get("fps",0))<=0: e.append("fps must be > 0")
     if not p.get("canon",{}).get("universe_id"): e.append("canon.universe_id is required")
     return e
+
 def plan(p):
     scenes=p.get("scenes",[]); shots=[s for x in scenes for s in x.get("shots",[])]
     return {"project":p.get("id"),"title":p.get("title"),"target_minutes":p.get("format",{}).get("duration_target_minutes"),"scene_count":len(scenes),"shot_count":len(shots),"canon":{k:len(p.get("canon",{}).get(k,[])) for k in ("characters","locations","props","styles")},"ready_for_shot_generation":bool(scenes)}
+
 def foundry(p):
     rows=[]
     for c in p.get("candidates",[]):
         scores=c.get("scores",{}); vals=[float(scores[k]) for k in CRITERIA if k in scores]
         rows.append({"id":c.get("id"),"title":c.get("title"),"reviewed":len(vals)==len(CRITERIA),"score":round(sum(vals)/len(vals),1) if vals else None})
     return {"foundry":p.get("id"),"candidate_count":len(rows),"candidates":rows}
+
 def coverage(p):
     if p.get("kind") != "FilmForgeShotCoverage":
         return {"ok": False, "errors": ["kind must be FilmForgeShotCoverage"]}
-    shots = p.get("shots", [])
-    errors = []
-    seen = set()
-    total = 0.0
-    scenes = {}
+    shots=p.get("shots",[]); errors=[]; seen=set(); total=0.0; scenes={}
     for shot in shots:
-        sid = shot.get("id")
+        sid=shot.get("id")
         if not sid: errors.append("shot missing id")
         elif sid in seen: errors.append(f"duplicate shot id: {sid}")
         seen.add(sid)
-        try: dur = float(shot.get("seconds", 0))
-        except (TypeError, ValueError): dur = 0
-        if dur <= 0: errors.append(f"{sid or 'unknown'} duration must be > 0")
-        total += dur
-        scene = shot.get("scene")
-        scenes[scene] = scenes.get(scene, 0.0) + dur
-    return {"ok": not errors, "film_id": p.get("film_id"), "shot_count": len(shots),
-            "total_seconds": round(total, 3), "total_minutes": round(total / 60, 3),
-            "scene_seconds": scenes, "errors": errors}
+        try: dur=float(shot.get("seconds",0))
+        except (TypeError,ValueError): dur=0
+        if dur<=0: errors.append(f"{sid or 'unknown'} duration must be > 0")
+        total+=dur; scene=shot.get("scene"); scenes[scene]=scenes.get(scene,0.0)+dur
+    return {"ok":not errors,"film_id":p.get("film_id"),"shot_count":len(shots),"total_seconds":round(total,3),"total_minutes":round(total/60,3),"scene_seconds":scenes,"errors":errors}
 
 def assets(p):
     if p.get("kind") != "FilmForgeAssetRegistry":
-        return {"ok": False, "errors": ["kind must be FilmForgeAssetRegistry"]}
-    rows = p.get("assets", [])
-    errors = []
-    ids = set()
-    blocking = []
+        return {"ok":False,"errors":["kind must be FilmForgeAssetRegistry"]}
+    rows=p.get("assets",[]); errors=[]; ids=set(); blocking=[]; required=[]; ready=[]
     for a in rows:
-        aid = a.get("id")
+        aid=a.get("id")
         if not aid: errors.append("asset missing id"); continue
         if aid in ids: errors.append(f"duplicate asset id: {aid}")
         ids.add(aid)
-        status = a.get("status")
-        if status == "required-reference":
-            blocking.append(aid)
-    return {"ok": not errors, "film_id": p.get("film_id"), "asset_count": len(rows),
-            "required_reference_assets": blocking,
-            "ready_for_generation": not errors and len(blocking) == 0,
-            "errors": errors}
+        status=a.get("status")
+        if status not in ASSET_STATES: errors.append(f"{aid} invalid status: {status}")
+        if a.get("required",False):
+            required.append(aid)
+            if status in READY_ASSET_STATES: ready.append(aid)
+            else: blocking.append(aid)
+    return {"ok":not errors,"film_id":p.get("film_id"),"asset_count":len(rows),
+            "required_assets":required,"ready_required_assets":ready,"blocking_assets":blocking,
+            "ready_for_generation":not errors and not blocking,"errors":errors}
 
 def main():
     ap=argparse.ArgumentParser(prog="filmforge"); sp=ap.add_subparsers(dest="cmd",required=True)
