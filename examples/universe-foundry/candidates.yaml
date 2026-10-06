@@ -63,3 +63,57 @@ candidates:
     first_film: "A salvager finds a memory of herself aboard a ship destroyed before she was born."
     expansion: "Memory economies, fabricated identities, ancient reefs and the origin of the phenomenon."
     production_fit: "One wreck, small cast, visually distinctive recurring asset and strong emotional focus."
+
+  - id: quiet-objects
+    title: "Quiet Objects"
+    premise: "Ordinary manufactured objects sometimes stop obeying causality for exactly 43 seconds."
+    emotional_engine: "People build rituals around tiny impossible events until one object appears to communicate."
+    visual_identity: "Mundane tactile objects behaving subtly wrong in grounded environments."
+    first_film: "A cargo inspector sees the same battered mug in three sealed containers before each event."
+    expansion: "A distributed message, causality engineering, collectors and hidden object histories."
+    production_fit: "Small cast and effects footprint; anomalies can be sold through editing."
+
+  - id: pale-transit
+    title: "Pale Transit"
+    premise: "Gate passengers sometimes arrive with memories of a journey everyone insists never occurs."
+    emotional_engine: "Strangers share intimate memories of weeks together despite an instantaneous crossing."
+    visual_identity: "Sterile terminals contrasted with dreamlike white corridors and impossible luggage."
+    first_film: "Two strangers recognize each other after transit and both remember burying a third passenger."
+    expansion: "Hidden transit space, missing passengers and civilizations between destinations."
+    production_fit: "Two leads, terminal interiors and controlled surreal sequences."
+
+  - id: redshift-children
+    title: "Redshift Children"
+    premise: "Children on distant colonies draw identical maps of stars that will not exist for millions of years."
+    emotional_engine: "Parents must decide whether their children are ill, manipulated or remembering another future."
+    visual_identity: "Childlike astronomical drawings against precise observatory imagery."
+    first_film: "An astronomer's daughter draws a stellar event hours before instruments detect it."
+    expansion: "Future memory, coordinated children and communication backward through inheritance."
+    production_fit: "Strong emotionally, though child-character continuity raises production difficulty."
+
+  - id: gravity-saints
+    title: "Gravity Saints"
+    premise: "Frontier settlements build religions around derelict machines that locally rewrite gravity."
+    emotional_engine: "Faith and engineering merge when miracles are reproducible but incomprehensible."
+    visual_identity: "Vertical settlements, floating relics, inverted rooms and gravity processions."
+    first_film: "A skeptical engineer repairs a failing relic and discovers it was never designed for humans."
+    expansion: "Relic pilgrimages, machine archaeology and the original network."
+    production_fit: "Strong hook; localized gravity effects keep the first film manageable."
+
+  - id: census-zero
+    title: "Census Zero"
+    premise: "A census finds documented citizens with homes and relationships but no evidence they physically existed."
+    emotional_engine: "Can someone be real if an entire society remembers them but reality does not?"
+    visual_identity: "Bureaucratic interfaces, empty homes and family media with human-shaped absences."
+    first_film: "An auditor investigates one nonexistent citizen and finds herself listed as his emergency contact."
+    expansion: "Synthetic histories, missing populations and institutions weaponizing consensus."
+    production_fit: "Low spectacle and small cast; relies on writing and performance."
+
+  - id: horizon-garden
+    title: "Horizon Garden"
+    premise: "Engineered ecosystems grow around black holes inside extreme time dilation."
+    emotional_engine: "A few hours of contact can cost everyone you know decades."
+    visual_identity: "Luminous structures skimming event horizons amid distorted starfields."
+    first_film: "A rescue pilot has minutes to retrieve a researcher while years pass outside."
+    expansion: "Deep-time cultures, horizon ecosystems and relativistic territory."
+    production_fit: "Spectacular and franchise-rich, but visually demanding."
