@@ -5,7 +5,7 @@ status_model:
   states: [planned, candidate, approved, locked]
   generation_ready_states: [approved, locked]
 assets:
-  - {id: sera-face-v1, entity: sera-vale, type: character-face, required: true, status: planned, lock: identity}
+  - {id: sera-face-v1, entity: sera-vale, type: character-face, required: true, status: candidate, lock: identity}
   - {id: sera-workwear-v1, entity: sera-vale, type: character-costume, required: true, status: planned, lock: design}
   - {id: sera-turnaround-v1, entity: sera-vale, type: character-turnaround, required: true, status: planned, lock: proportions}
   - {id: kestrel-room-a-v1, entity: kestrel-listening-room, type: environment-reference, required: true, status: planned, lock: geometry}
