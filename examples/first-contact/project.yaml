@@ -1,0 +1,26 @@
+version: "0.1"
+kind: FilmForgeProject
+id: ff-reference-001
+title: "Untitled FilmForge Sci-Fi Reference"
+logline: "A routine recovery mission reveals evidence that humanity's understanding of its frontier is fundamentally wrong."
+
+format:
+  duration_target_minutes: 18
+  aspect_ratio: "2.39:1"
+  fps: 24
+
+canon:
+  universe_id: universe-001
+  characters:
+    - protagonist-001
+    - companion-001
+  locations:
+    - station-001
+    - vessel-001
+    - anomaly-001
+  props:
+    - recorder-001
+  styles:
+    - visual-style-001
+
+scenes: []
