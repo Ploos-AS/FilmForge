@@ -1,0 +1,29 @@
+version: "0.1"
+kind: FilmForgeLookBible
+id: dc-look-v1
+intent: "Quiet, tactile, grounded science fiction where ordinary technology makes the impossible more disturbing."
+cinematography:
+  aspect_ratio: "2.39:1"
+  fps: 24
+  camera: "mostly locked or extremely restrained movement"
+  lenses: "natural perspective; moderate wides for geography, restrained closeups for listening"
+  depth_of_field: "controlled; do not hide continuity behind constant shallow focus"
+  composition: "negative space, stable geometry, human smallness"
+lighting:
+  principle: "motivated practical light"
+  normal: "quiet work illumination"
+  channel: "no supernatural lighting change"
+  finale: "believable receiver indicators add localized light"
+texture:
+  - lived-in
+  - maintained
+  - tactile
+  - restrained
+  - non-glossy
+avoid:
+  - cyberpunk-neon
+  - teal-orange-blockbuster-grade
+  - lens-flare-as-style
+  - hologram-overload
+  - horror-ghost-language
+  - excessive-camera-motion
