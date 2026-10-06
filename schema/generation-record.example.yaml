@@ -1,0 +1,21 @@
+version: "0.1"
+kind: FilmForgeGenerationRecord
+shot_id: DC-001
+take_id: DC-001-T001
+provider: example
+model: example-model
+model_version: unknown
+prompt: ""
+negative_prompt: ""
+seed: null
+reference_assets: []
+generation_parameters: {}
+generated_at: null
+artifact:
+  path: null
+  sha256: null
+review:
+  status: unreviewed
+  accepted_by: null
+  continuity_flags: []
+  notes: ""
