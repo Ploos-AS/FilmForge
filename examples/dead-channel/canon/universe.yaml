@@ -1,0 +1,20 @@
+version: "0.1"
+kind: FilmForgeUniverseCanon
+universe_id: dead-channel
+status: film-1-frozen
+rules:
+  - id: dc-rule-001
+    text: "The Dead Channel is universally detectable but cannot be localized in normal space."
+  - id: dc-rule-002
+    text: "Passive reception occurs; verified reciprocal contact is exceptionally rare."
+  - id: dc-rule-003
+    text: "Received civilizations are independently extinct or nonexistent in the listener's present."
+  - id: dc-rule-004
+    text: "The phenomenon is measurable and material in presentation; Film #1 does not establish a supernatural explanation."
+unknowns:
+  - origin of the channel
+  - physical mechanism
+  - relationship between incompatible histories
+  - cause of civilization disappearance
+  - meaning or coordination of the final chorus
+canon_policy: "Unknowns remain unknown unless explicitly promoted by a later canon decision."
