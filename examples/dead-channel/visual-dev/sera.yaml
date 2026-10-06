@@ -1,0 +1,25 @@
+version: "0.1"
+kind: FilmForgeVisualDevelopmentBrief
+id: sera-vdev-001
+entity: sera-vale
+goal: "Create a reproducible, grounded protagonist reference set."
+design:
+  age: "early-to-mid 30s"
+  silhouette: "practical communications technician; compact utility layers"
+  hair: "short-to-medium dark hair; simple stable silhouette"
+  costume: "charcoal workwear, muted undershirt, left-chest station ID patch, wrist terminal"
+  expression_baseline: "observant, reserved, competent"
+  exclusions: [cyberpunk-fashion, glamour-makeup, elaborate-hair, armor, neon, jewelry-focus]
+required_views:
+  - neutral-headshot
+  - three-quarter-headshot
+  - full-body-front
+  - full-body-side
+  - full-body-back
+  - seated-console
+  - listening-profile
+approval:
+  identity_consistency: required
+  costume_reproducibility: required
+  silhouette_readability: required
+prompt_core: "Grounded near-future communications technician, believable working professional, practical charcoal utility workwear, restrained lived-in science-fiction production design, natural human features, documentary realism, no glamour styling."
