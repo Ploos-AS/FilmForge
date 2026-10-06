@@ -1,0 +1,12 @@
+[project]
+name = "filmforge"
+version = "0.1.0"
+description = "AI-assisted filmmaking pipeline"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0"]
+
+[project.scripts]
+filmforge = "filmforge_cli:main"
+
+[tool.setuptools]
+py-modules = ["filmforge_cli"]
