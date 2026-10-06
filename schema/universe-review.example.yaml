@@ -1,0 +1,14 @@
+version: "0.1"
+kind: FilmForgeUniverseReview
+candidate_id: example
+reviewer: story-editor
+scores:
+  premise: 0
+  emotional_potential: 0
+  visual_identity: 0
+  originality: 0
+  production_feasibility: 0
+  franchise_depth: 0
+strengths: []
+risks: []
+notes: ""
