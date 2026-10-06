@@ -1,0 +1,24 @@
+version: "0.1"
+kind: FilmForgeVisualDevelopmentBrief
+id: kestrel-vdev-001
+entity: kestrel-listening-station
+goal: "Lock station exterior, listening-room geography and reusable camera anchors."
+design:
+  exterior: "small inhabited module attached to an antenna structure far larger than the crew space"
+  interior: "maintained but aging technical facility assembled across multiple upgrade generations"
+  materials: "painted metal, service panels, cable trunks, practical acoustic surfaces"
+  lighting: "motivated work lights, display spill, darkness beyond viewport"
+  exclusions: [luxury-spaceship, holograms, neon-cyberpunk, cathedral-scale-interior, random-greebles]
+required_views:
+  - exterior-hero-wide
+  - listening-room-angle-a
+  - listening-room-angle-b
+  - listening-room-angle-c
+  - listening-room-angle-d
+  - receiver-wall-orthographic
+  - floorplan
+approval:
+  fixed_geography: required
+  reusable_camera_angles: required
+  prop_locations: required
+prompt_core: "Grounded remote deep-space listening station, utilitarian communications facility, practical industrial construction, visibly maintained and repaired, restrained near-future technology, believable human scale."
