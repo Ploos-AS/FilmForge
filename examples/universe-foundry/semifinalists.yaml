@@ -1,0 +1,48 @@
+version: "0.1"
+kind: FilmForgeUniverseShortlist
+foundry_id: foundry-001
+stage: semifinal
+selection_goal: 5
+
+selected:
+  - candidate_id: echo-debt
+    reason: "Exceptional speculative engine with personal moral stakes and very deep expansion potential."
+    key_risk: "Rules around alternate histories must remain simple enough to understand emotionally."
+  - candidate_id: dead-channel
+    reason: "Immediate hook, excellent low-cost first-film fit, strong atmosphere, and a mystery that scales naturally."
+    key_risk: "Must differentiate itself from supernatural radio and generic ghost-story language."
+  - candidate_id: memory-reef
+    reason: "Best combination of emotional story engine and recognizable visual identity."
+    key_risk: "Memory behavior needs strict rules to prevent arbitrary plot solutions."
+  - candidate_id: pale-transit
+    reason: "A clean, human mystery with two-character intimacy and a larger hidden-space premise."
+    key_risk: "The transit-between-worlds idea needs a visual signature that is not generic liminal-space imagery."
+  - candidate_id: census-zero
+    reason: "Highly producible identity mystery with unusual bureaucratic science-fiction texture and strong philosophical stakes."
+    key_risk: "Needs cinematic action and imagery so the concept does not become purely conversational."
+
+alternates:
+  - candidate_id: borrowed-sun
+    reason: "Excellent visual and franchise-scale premise; slightly harder to deliver emotionally in the first short."
+  - candidate_id: second-sky
+    reason: "Outstanding image-generation opportunity; underlying dramatic mechanism needs more definition."
+  - candidate_id: the-last-orbit
+    reason: "Strong cosmic mystery but currently less personal than the leading five."
+
+held_for_later:
+  - candidate_id: quiet-objects
+  - candidate_id: redshift-children
+  - candidate_id: gravity-saints
+  - candidate_id: horizon-garden
+
+next_test:
+  - "one-sentence audience promise"
+  - "protagonist and emotional wound/want"
+  - "opening image"
+  - "first two minutes"
+  - "midpoint discovery"
+  - "ending image"
+  - "three hard universe rules"
+  - "three future-film premises"
+  - "visual signature"
+  - "reference-film production burden"
