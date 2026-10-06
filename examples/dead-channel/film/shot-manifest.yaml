@@ -1,0 +1,42 @@
+version: "0.1"
+kind: FilmForgeShotManifest
+film_id: dead-channel-film-001
+status: draft
+policy:
+  readable_ui: composite
+  cael_visualization: forbidden
+  supernatural_visual_effects: forbidden
+  primary_character_reference: sera-vale
+  primary_location_reference: kestrel-listening-room
+scenes:
+  - scene_id: sc01
+    target_shots: 10
+    anchors: [kestrel-exterior, listening-room-wide-a, sera-routine, forbidden-receiver, title-reaction]
+  - scene_id: sc02
+    target_shots: 12
+    anchors: [receiver-diagnostic, spectrum-insert, sera-listens, archive-ui, cael-first-wait]
+  - scene_id: sc03
+    target_shots: 11
+    anchors: [sera-reply-medium, routing-insert, recording-ui, sera-name-reaction]
+  - scene_id: sc04
+    target_shots: 10
+    anchors: [diagnostics, sera-profile-listening, date-ui, earth-extinct-reaction]
+  - scene_id: sc05
+    target_shots: 12
+    anchors: [astronomy-ui, archive-crosscheck, sera-cael-dialogue, incident-match]
+  - scene_id: sc06
+    target_shots: 13
+    anchors: [archive-sequence, transmit-warning, personal-message, decision-closeup]
+  - scene_id: sc07
+    target_shots: 12
+    anchors: [interference, sera-transmit, relay-engage, cael-loss, silence]
+  - scene_id: sc08
+    target_shots: 12
+    anchors: [report, first-click, receiver-spread, sera-chorus, kestrel-final-exterior]
+estimated_total_shots: 92
+generation_strategy:
+  - "Lock Sera reference pack before moving beyond animatic."
+  - "Lock listening-room geometry and hero receiver before scene generation."
+  - "Prefer reusable plates and inserts for console/UI shots."
+  - "Generate dialogue coverage conservatively; use editing and sound to avoid unnecessary lip-sync shots."
+  - "Treat every accepted generated asset as provenance-tracked canon evidence."
