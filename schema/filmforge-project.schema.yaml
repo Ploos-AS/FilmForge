@@ -1,0 +1,49 @@
+version: "0.1"
+kind: FilmForgeProject
+
+required:
+  - id
+  - title
+  - format
+  - canon
+  - scenes
+
+fields:
+  id: string
+  title: string
+  logline: string
+  format:
+    duration_target_minutes: number
+    aspect_ratio: string
+    fps: number
+  canon:
+    universe_id: string
+    characters: list
+    locations: list
+    props: list
+    styles: list
+  scenes:
+    - id: string
+      title: string
+      purpose: string
+      location_id: string
+      characters: list
+      shots:
+        - id: string
+          duration_seconds: number
+          framing: string
+          lens_mm: number
+          camera_move: string
+          action: string
+          dialogue: list
+          references: list
+          continuity: list
+          generation:
+            provider: string
+            model: string
+            prompt: string
+            negative_prompt: string
+            seed: string
+          review:
+            status: string
+            notes: list
