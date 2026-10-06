@@ -1,0 +1,59 @@
+version: "0.1"
+kind: FilmForgeShotCoverage
+film_id: dead-channel-film-001
+fps: 24
+shots:
+  - {id: DC-001, scene: sc01, seconds: 12, framing: "extreme-wide exterior", camera: locked, audio: "station traffic; machinery", continuity: [kestrel-exterior]}
+  - {id: DC-002, scene: sc01, seconds: 16, framing: "wide listening room A", camera: locked, audio: "room tone", continuity: [sera-vale, kestrel-listening-room]}
+  - {id: DC-003, scene: sc01, seconds: 15, framing: "insert montage", camera: static, audio: "routine equipment", continuity: [kestrel-main-console]}
+  - {id: DC-004, scene: sc01, seconds: 12, framing: "medium Sera", camera: locked, audio: "faint voice", continuity: [sera-vale]}
+  - {id: DC-005, scene: sc01, seconds: 14, framing: "receiver insert to medium", camera: restrained, audio: "lead disconnect; silence", continuity: [forbidden-receiver]}
+  - {id: DC-006, scene: sc01, seconds: 21, framing: "medium close Sera", camera: slow-push, audio: "voice says Sera; title", continuity: [sera-vale, forbidden-receiver]}
+
+  - {id: DC-007, scene: sc02, seconds: 25, framing: "receiver diagnostics inserts", camera: static, audio: "static to domestic voices", continuity: [forbidden-receiver]}
+  - {id: DC-008, scene: sc02, seconds: 25, framing: "profile Sera", camera: locked, audio: "ordinary remote conversation", continuity: [sera-vale]}
+  - {id: DC-009, scene: sc02, seconds: 25, framing: "OTS console", camera: locked, audio: "archive search", continuity: [kestrel-main-console]}
+  - {id: DC-010, scene: sc02, seconds: 25, framing: "close Sera", camera: minimal, audio: "incident log", continuity: [sera-vale]}
+  - {id: DC-011, scene: sc02, seconds: 25, framing: "receiver / hand insert", camera: locked, audio: "Cael: Wait", continuity: [forbidden-receiver]}
+  - {id: DC-012, scene: sc02, seconds: 25, framing: "reaction close", camera: locked, audio: "silence tail", continuity: [sera-vale]}
+
+  - {id: DC-013, scene: sc03, seconds: 30, framing: "medium dialogue coverage", camera: locked, audio: "Sera/Cael first exchange", continuity: [sera-vale]}
+  - {id: DC-014, scene: sc03, seconds: 30, framing: "routing inserts", camera: static, audio: "receive-only test", continuity: [kestrel-main-console, forbidden-receiver]}
+  - {id: DC-015, scene: sc03, seconds: 30, framing: "medium-close Sera", camera: slow-push, audio: "Cael repeats incident log", continuity: [sera-vale]}
+  - {id: DC-016, scene: sc03, seconds: 30, framing: "console / waveform", camera: locked, audio: "name/location exchange", continuity: [kestrel-main-console]}
+  - {id: DC-017, scene: sc03, seconds: 30, framing: "close Sera", camera: locked, audio: "Cael: Sera Vale", continuity: [sera-vale]}
+
+  - {id: DC-018, scene: sc04, seconds: 30, framing: "wide diagnostics", camera: locked, audio: "diagnostic sequence", continuity: [sera-vale, kestrel-listening-room]}
+  - {id: DC-019, scene: sc04, seconds: 30, framing: "profile listening", camera: locked, audio: "not today", continuity: [sera-vale]}
+  - {id: DC-020, scene: sc04, seconds: 30, framing: "OTS date UI", camera: locked, audio: "date exchange", continuity: [kestrel-main-console]}
+  - {id: DC-021, scene: sc04, seconds: 30, framing: "medium Sera", camera: subtle-push, audio: "Cael laughs", continuity: [sera-vale]}
+  - {id: DC-022, scene: sc04, seconds: 30, framing: "close Sera", camera: locked, audio: "Earth extinct reveal", continuity: [sera-vale]}
+
+  - {id: DC-023, scene: sc05, seconds: 30, framing: "astronomy UI / Sera", camera: restrained, audio: "reference exchange", continuity: [kestrel-main-console]}
+  - {id: DC-024, scene: sc05, seconds: 30, framing: "archive inserts", camera: static, audio: "data verification", continuity: [kestrel-main-console]}
+  - {id: DC-025, scene: sc05, seconds: 30, framing: "medium dialogue", camera: locked, audio: "world listed uninhabited", continuity: [sera-vale]}
+  - {id: DC-026, scene: sc05, seconds: 30, framing: "close Sera", camera: locked, audio: "612 years", continuity: [sera-vale]}
+  - {id: DC-027, scene: sc05, seconds: 30, framing: "console discovery", camera: slow-push, audio: "incident record opens", continuity: [kestrel-main-console]}
+
+  - {id: DC-028, scene: sc06, seconds: 30, framing: "archive sequence", camera: static, audio: "Cael mentions flicker", continuity: [kestrel-main-console]}
+  - {id: DC-029, scene: sc06, seconds: 30, framing: "medium Sera", camera: locked, audio: "what color is the sky", continuity: [sera-vale]}
+  - {id: DC-030, scene: sc06, seconds: 30, framing: "close Sera / UI", camera: restrained, audio: "green band confirmation", continuity: [sera-vale]}
+  - {id: DC-031, scene: sc06, seconds: 30, framing: "transmit control insert", camera: locked, audio: "protocol alert", continuity: [kestrel-main-console]}
+  - {id: DC-032, scene: sc06, seconds: 30, framing: "personal-message insert", camera: locked, audio: "private message inaudible to audience", continuity: [sera-vale]}
+  - {id: DC-033, scene: sc06, seconds: 30, framing: "close Sera", camera: slow-push, audio: "your world is about to die", continuity: [sera-vale]}
+
+  - {id: DC-034, scene: sc07, seconds: 30, framing: "medium Sera", camera: restrained, audio: "channel interference; questions", continuity: [sera-vale]}
+  - {id: DC-035, scene: sc07, seconds: 30, framing: "close Sera", camera: locked, audio: "I don't know sequence", continuity: [sera-vale]}
+  - {id: DC-036, scene: sc07, seconds: 30, framing: "hand/transmit insert to medium", camera: controlled, audio: "Because you asked; relay engages", continuity: [kestrel-main-console]}
+  - {id: DC-037, scene: sc07, seconds: 30, framing: "close dialogue", camera: subtle-handheld, audio: "warning; Cael loss", continuity: [sera-vale]}
+
+  - {id: DC-038, scene: sc08, seconds: 18, framing: "wide listening room A", camera: locked, audio: "station sounds return", continuity: [sera-vale, kestrel-listening-room]}
+  - {id: DC-039, scene: sc08, seconds: 18, framing: "medium report", camera: locked, audio: "truthful incident report", continuity: [sera-vale]}
+  - {id: DC-040, scene: sc08, seconds: 18, framing: "receiver wall wide", camera: locked, audio: "sequential physical clicks", continuity: [forbidden-receiver]}
+  - {id: DC-041, scene: sc08, seconds: 18, framing: "close Sera", camera: slow-push, audio: "multilingual voices accumulate", continuity: [sera-vale]}
+  - {id: DC-042, scene: sc08, seconds: 10, framing: "wide receiver wall / Sera", camera: locked, audio: "We heard you", continuity: [sera-vale, kestrel-listening-room]}
+  - {id: DC-043, scene: sc08, seconds: 8, framing: "exterior extreme-wide", camera: locked, audio: "quiet tail", continuity: [kestrel-exterior]}
+coverage_notes:
+  - "This is animatic coverage, not the final edit list."
+  - "Long coverage shots are expected to split into inserts/reactions after timing review."
+  - "Total duration intentionally matches the 18-minute scene plan."
