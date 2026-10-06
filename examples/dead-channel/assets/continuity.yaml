@@ -1,0 +1,30 @@
+version: "0.1"
+kind: FilmForgeContinuityLocks
+film_id: dead-channel-film-001
+locks:
+  sera-vale:
+    immutable:
+      - face_identity
+      - hair_silhouette
+      - workwear_design
+      - id_patch_left_chest
+      - wrist_terminal
+    scene_state:
+      sc01: {costume: sera-workwear-v1, condition: clean, emotional_state: routine}
+      sc02: {costume: sera-workwear-v1, condition: clean, emotional_state: alert}
+      sc03: {costume: sera-workwear-v1, condition: clean, emotional_state: controlled-concern}
+      sc04: {costume: sera-workwear-v1, condition: clean, emotional_state: unsettled}
+      sc05: {costume: sera-workwear-v1, condition: clean, emotional_state: focused}
+      sc06: {costume: sera-workwear-v1, condition: clean, emotional_state: conflicted}
+      sc07: {costume: sera-workwear-v1, condition: clean, emotional_state: committed}
+      sc08: {costume: sera-workwear-v1, condition: clean, emotional_state: changed}
+  kestrel-listening-room:
+    immutable:
+      receiver_wall: behind_primary_chair
+      viewport: camera_left_from_primary_chair
+      main_entry: rear_right
+      hero_receiver: fixed_receiver_wall_slot
+    prohibited:
+      - holographic_interfaces
+      - unexplained_room_relayout
+      - decorative_cyberpunk_lighting
