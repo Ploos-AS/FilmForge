@@ -1,0 +1,71 @@
+version: "0.1"
+kind: FilmForgeProductionProof
+project: dead-channel
+shots:
+  - id: proof-001
+    purpose: "Establish isolation and Kestrel."
+    framing: "Exterior wide; station tiny against starfield."
+    duration_s: 6
+    difficulty: low
+  - id: proof-002
+    purpose: "Introduce Sera and receiver wall."
+    framing: "Locked wide from canonical listening-room angle A."
+    duration_s: 8
+    difficulty: medium
+  - id: proof-003
+    purpose: "Impossible first event."
+    framing: "Medium on Sera; disconnected receiver visible behind her."
+    duration_s: 7
+    difficulty: medium
+  - id: proof-004
+    purpose: "Make the channel tactile."
+    framing: "Macro inserts of tuning control, speaker grille and spectrum display."
+    duration_s: 5
+    difficulty: low
+  - id: proof-005
+    purpose: "First response."
+    framing: "Slow push toward Sera as she realizes the voice answered her."
+    duration_s: 9
+    difficulty: medium
+  - id: proof-006
+    purpose: "Cael becomes a person rather than an effect."
+    framing: "Sera listening in profile; no visualization of Cael."
+    duration_s: 12
+    difficulty: low
+  - id: proof-007
+    purpose: "Historical impossibility."
+    framing: "Over-shoulder console with composited astronomical verification UI."
+    duration_s: 7
+    difficulty: medium
+  - id: proof-008
+    purpose: "Emotional decision."
+    framing: "Closeup: hand moves from receive control to transmit."
+    duration_s: 5
+    difficulty: low
+  - id: proof-009
+    purpose: "Sera warns Cael."
+    framing: "Stable closeup; performance carries scene."
+    duration_s: 12
+    difficulty: high
+  - id: proof-010
+    purpose: "Contact dies."
+    framing: "Same composition as proof-005, now still and silent."
+    duration_s: 8
+    difficulty: medium
+  - id: proof-011
+    purpose: "Final escalation."
+    framing: "Wide: receiver indicators wake sequentially across wall."
+    duration_s: 10
+    difficulty: high
+  - id: proof-012
+    purpose: "Final human reaction."
+    framing: "Close on Sera while chorus surrounds her; cut before explanation."
+    duration_s: 8
+    difficulty: high
+
+proof_goals:
+  - "Maintain Sera identity across wide, profile and closeup."
+  - "Maintain Kestrel geometry across canonical angles."
+  - "Maintain hero receiver design."
+  - "Composite readable UI rather than trusting generated text."
+  - "Demonstrate that sound can carry Cael and the final chorus without visualizing them."
