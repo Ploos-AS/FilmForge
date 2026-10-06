@@ -1,0 +1,41 @@
+version: "0.1"
+kind: FilmForgePromptTemplate
+id: dead-channel-shot-v1
+required_fields:
+  - shot_id
+  - purpose
+  - framing
+  - camera
+  - continuity
+prompt_sections:
+  - canon
+  - subject
+  - environment
+  - action
+  - camera
+  - lighting
+  - continuity
+  - exclusions
+defaults:
+  style_ref: dc-look-v1
+  readable_ui: composite_in_post
+  dialogue_lipsync: avoid_unless_required
+  exclusions:
+    - holograms
+    - neon-cyberpunk
+    - supernatural-glow
+    - random-text
+    - costume-variation
+    - station-layout-drift
+provenance:
+  record:
+    - provider
+    - model
+    - model_version
+    - prompt
+    - negative_prompt
+    - seed
+    - reference_assets
+    - generation_parameters
+    - generated_at
+    - accepted_by
