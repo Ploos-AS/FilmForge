@@ -47,11 +47,33 @@ def coverage(p):
             "total_seconds": round(total, 3), "total_minutes": round(total / 60, 3),
             "scene_seconds": scenes, "errors": errors}
 
+def assets(p):
+    if p.get("kind") != "FilmForgeAssetRegistry":
+        return {"ok": False, "errors": ["kind must be FilmForgeAssetRegistry"]}
+    rows = p.get("assets", [])
+    errors = []
+    ids = set()
+    blocking = []
+    for a in rows:
+        aid = a.get("id")
+        if not aid: errors.append("asset missing id"); continue
+        if aid in ids: errors.append(f"duplicate asset id: {aid}")
+        ids.add(aid)
+        status = a.get("status")
+        if status == "required-reference":
+            blocking.append(aid)
+    return {"ok": not errors, "film_id": p.get("film_id"), "asset_count": len(rows),
+            "required_reference_assets": blocking,
+            "ready_for_generation": not errors and len(blocking) == 0,
+            "errors": errors}
+
 def main():
     ap=argparse.ArgumentParser(prog="filmforge"); sp=ap.add_subparsers(dest="cmd",required=True)
-    for cmd in ("validate","plan","foundry","coverage"):
+    for cmd in ("validate","plan","foundry","coverage","assets"):
         q=sp.add_parser(cmd); q.add_argument("project")
     a=ap.parse_args(); p=load(a.project)
+    if a.cmd=="assets":
+        result=assets(p); print(json.dumps(result,indent=2)); raise SystemExit(0 if result["ok"] else 1)
     if a.cmd=="coverage":
         result=coverage(p); print(json.dumps(result,indent=2)); raise SystemExit(0 if result["ok"] else 1)
     if a.cmd=="foundry":
